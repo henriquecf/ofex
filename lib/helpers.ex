@@ -18,6 +18,8 @@ defmodule Ofex.Helpers do
   defp format_attribute_value({:balance_date, date_str}), do: {:balance_date, string_to_date(date_str)}
   defp format_attribute_value({:positive_balance, balance_str}), do: {:positive_balance, convert_to_positive_float(balance_str)}
   defp format_attribute_value({:posted_date, date_str}), do: {:posted_date, string_to_date(date_str)}
+  defp format_attribute_value({:start_date, date_str}), do: {:start_date, string_to_date(date_str)}
+  defp format_attribute_value({:end_date, date_str}), do: {:end_date, string_to_date(date_str)}
   defp format_attribute_value(attribute_tuple), do: attribute_tuple
 
   def string_to_date(nil), do: nil
